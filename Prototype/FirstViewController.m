@@ -22,6 +22,10 @@
 @synthesize dateF;
 @synthesize imagePickerController;
 @synthesize imagePicked;
+@synthesize cameraMessage;
+@synthesize firstNameTextField;
+@synthesize lastNameTextField;
+@synthesize patientViewController;
 
 - (void)viewDidLoad
 {
@@ -34,6 +38,7 @@
         imagePickerController = [[ UIImagePickerController alloc] init];
         [imagePickerController setDelegate:self];
     }
+    cameraMessage = [[UIAlertView alloc] initWithTitle:@"Get Photo" message:@"Photo Choices" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Photo Library", @"Take Photo", nil];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,8 +104,41 @@
 
 -(IBAction)photoSelectAction:(id)sender
 {
-    [imagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
-    [self presentViewController:imagePickerController animated:YES completion:nil];
+    [cameraMessage show];
+    
+}
+
+-(IBAction)customization:(id)sender
+{
+    if(patientViewController == nil)
+    {
+        patientViewController= [[PatientViewController alloc] initWithNibName:@"PatientViewController" bundle:nil];
+    }
+    [self presentViewController:patientViewController animated:YES completion:nil];
+
+}
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [super touchesBegan:touches withEvent:event];
+    [firstNameTextField resignFirstResponder];
+    [lastNameTextField resignFirstResponder];
+}
+
+/*delegate alert*/
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    if ([title isEqualToString:@"Photo Library"])
+    {
+        [imagePickerController setSourceType:UIImagePickerControllerSourceTypePhotoLibrary];
+        [self presentViewController:imagePickerController animated:YES completion:nil];
+    }
+    else if([title isEqualToString:@"Take Photo"])
+    {
+        [imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
+        [self presentViewController:imagePickerController animated:YES completion:nil];
+    }
 }
 
 /*delegate method*/

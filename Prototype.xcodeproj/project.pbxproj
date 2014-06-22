@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AD4A043419568572004186B6 /* man.png in Resources */ = {isa = PBXBuildFile; fileRef = AD4A043319568572004186B6 /* man.png */; };
 		AD9C43C0194A1DB400C6C267 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9C43BF194A1DB400C6C267 /* Foundation.framework */; };
 		AD9C43C2194A1DB400C6C267 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9C43C1194A1DB400C6C267 /* CoreGraphics.framework */; };
 		AD9C43C4194A1DB400C6C267 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD9C43C3194A1DB400C6C267 /* UIKit.framework */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AD4A043319568572004186B6 /* man.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = man.png; sourceTree = "<group>"; };
 		AD9C43BC194A1DB400C6C267 /* Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD9C43BF194A1DB400C6C267 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AD9C43C1194A1DB400C6C267 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -137,6 +139,7 @@
 				ADBE118C1953AB3E007547AF /* PatientViewController.xib */,
 				AD9C43DD194A1DB500C6C267 /* Images.xcassets */,
 				ADBE118819524853007547AF /* placeholder.jpg */,
+				AD4A043319568572004186B6 /* man.png */,
 				AD9C43C6194A1DB400C6C267 /* Supporting Files */,
 			);
 			path = Prototype;
@@ -253,6 +256,7 @@
 				ADBE118919524853007547AF /* placeholder.jpg in Resources */,
 				ADBE118E1953AB3F007547AF /* PatientViewController.xib in Resources */,
 				AD9C43CA194A1DB400C6C267 /* InfoPlist.strings in Resources */,
+				AD4A043419568572004186B6 /* man.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
